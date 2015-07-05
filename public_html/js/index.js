@@ -1,13 +1,12 @@
 $(function(){
-	typeText(" I study Computer Science at the University of York");
+
+    $(function(){
+        $(".typing-text").typed({
+            strings: [" study Computer Science at the University of York", " am a rock climber"],
+            typeSpeed: 0,
+            loop: true,
+            backdelay: 3000
+        });
+
+    });
 });
-
-function typeText(text){
-	$.each(text.split(''), function(i,letter){
-
-		setTimeout(function(){
-			$('#typing-text').html($('#typing-text').html() + letter);
-		}, 50*i);
-
-	});
-};

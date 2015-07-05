@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Qumarth Jash">
-    <meta name="description" content="Hi I'm Qumarth, a second year Computer Science student at the University of York that loves all things tech">
+    <meta name="description" content="Hi I'm Qumarth, a Computer Science student at the University of York that loves all things tech">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Qumarth Jash</title>
 
@@ -13,7 +13,7 @@
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Stylesheet -->
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link href="css/index.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -27,6 +27,7 @@
 		<div class = "container">
 			<a href="index.html" class = "navbar-brand">Qumarth Jash</a>
 
+      <!-- Collapsable button for mobile sites -->
 			<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
 				<span class = "icon-bar"></span>
 				<span class = "icon-bar"></span>
@@ -38,7 +39,6 @@
 				<ul class = "nav navbar-nav navbar-right">
 
 					<li><a href="#">About</a></li>
-					<li><a href="#">Portfolio</a></li>
 					<li><a href="#">Contact</a></li>
 					<li><a href="https://github.com/Q-Mart"><img src = "img/github.png" alt=Github height=75% width=75%></img></a></li>
 					<li><a href="https://uk.linkedin.com/in/qmart"><img src="img/linkedin.png" alt=LinkedIn height=75% width=75%></img></a></li>
@@ -50,12 +50,21 @@
 		</div>
 	</div>
 
-    <div id="slideshow">
+    <div id="image">
+      <ul class="slideshow">
 
-      <h1 class="slideshow-text" id="homepage-title">Hi, I'm Qumarth</h1>
-      <h2 class="slideshow-text" id="typing-text">and</h2>
+        <li><span>Image 1</span></li>
+        <li><span>Image 2</span></li>
 
+      </ul>
     </div>
+
+    <section id="text">
+
+      <h1 id="title">Hi, I'm Qumarth</h1>
+      <sh2 id="content">and I<span class="typing-text"></span></sh2>
+
+    </section>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -63,5 +72,9 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <!-- Personal Javascript -->
     <script src="js/index.js"></script>
+    <script src="js/typed_js/js/typed.js"></script>
+    <script>
+
+    </script>
   </body>
 </html>
