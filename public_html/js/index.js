@@ -3,7 +3,7 @@ $(function(){
 		change_background();
 
 		$(".typing-text").typed({
-			strings: ["study Computer Science at the University of York", "like to climb", "am the Computing Officer at University Radio York", "like comedy"],
+			strings: ["study Computer Science with Embedded Systems Engineering at the University of York", "like to rock climb", "am a Computing Officer at University Radio York", "like to perform Stand Up Comedy"],
 			loop: true,
 			backDelay: 3000
     });
@@ -16,7 +16,7 @@ function change_background(){
 	var random_image_index = Math.floor(Math.random() * maximum_index);
 	var background = backgrounds[random_image_index];
 
-	if ((background == 'spain') || (background == 'climbing')){
+	if (background == 'spain'){
 	
 		$('#text').css({
 			'color' : 'black',
@@ -35,6 +35,7 @@ function change_background(){
 			'-moz-background-size' : 'cover',
 			'-o-background-size' : 'cover',
 			'background-size' : 'cover',
+			'background-postion' : '50% 50%'
 		});
 
 };
