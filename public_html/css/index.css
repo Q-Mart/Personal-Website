@@ -1,3 +1,13 @@
+html{
+    min-height : 100%;
+    background-image: url('../img/bg/spain.jpg');
+    -webkit-background-size : cover;
+    -moz-background-size : cover;
+    -o-background-size : cover;
+    background-size : cover;
+    background-postion : 50% 50%;
+}
+
 body{
 	min-height: 100%;
 }
@@ -9,6 +19,7 @@ body{
 	width: 100%;
 	padding: 20px;
 }
+
 
 .typed-cursor{
     opacity: 1;
