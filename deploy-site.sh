@@ -11,7 +11,7 @@ git pull
 echo "Pulling complete"
 
 echo "Removing old site"
-rm -r /var/www/qumarth.me/*
+rm -rf /var/www/qumarth.me/*
 
 echo "Deploying update"
 cp -r public_html /var/www/qumarth.me/
