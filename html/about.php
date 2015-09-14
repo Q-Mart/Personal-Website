@@ -28,7 +28,7 @@
 				I have used a multitude of languages however I am most comfortable with python, and it is my go-to language for scripting.</br>
 				</br>
 				Listed below is my experience with various technologies. If you would like a copy of my CV, please feel free to
-				<a href="qumarth.me/contact">contact me</a>.
+				<a href="qumarth.me/contact.php">contact me</a>.
 				</br>
 				</br>
 				<small>This website was made by me with help from <a href="http://getbootstrap.com">Bootstrap</a> and
