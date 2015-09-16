@@ -4,15 +4,17 @@
  <body>
 	<?php include 'templates/navbar.php';?>
 
-	<div class="container">
-		<div class="row">
-			<h1 class="col-md-offset-2 col-md-2">About Me</h1>
+	<div class="mdl-grid">
+		<div class="mdl-cell mdl-cell--1-col"></div>
+		<div class="mdl-cell mdl-cell--4-col">
+				<h1 class="">About Me</h1>
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<p id="about-text" class="col-md-offset-2 col-md-8">
+	<div class="mdl-grid">
+		<div class="mdl-cell mdl-cell--1-col"></div>
+		<div class="mdl-cell mdl-cell--8-col">
+			<p id="about-text">
 				Hello, my name is Qumarth Jash and I study Computer Science with Embedded Systems Engineering at the University of York, 
 				completing my first year with a first.</br>
 
@@ -25,51 +27,59 @@
 				</br>
 				As well as this, I present my own radio show.</br>
 				</br>
+				Throughout August 2015, I performed in a <a href="http://www.nouse.co.uk/2015/08/15/edinburgh-fringe-2015-review-present-and-correct/">sketch show at the Edinburgh Fringe.</a></br>
+				</br>
 				I have used a multitude of languages however I am most comfortable with python, and it is my go-to language for scripting.</br>
 				</br>
 				Listed below is my experience with various technologies. If you would like a copy of my CV, please feel free to
 				<a href="qumarth.me/contact.php">contact me</a>.
 				</br>
-				</br>
-				<small>This website was made by me with help from <a href="http://getbootstrap.com">Bootstrap</a> and
-				<a href="http://www.mattboldt.com/demos/typed-js/">Typed.JS</a></small>
 			</p>
 		</div>
 	</div>
 
-	<div class="container">
-		<div class="row">
-			
-			<div id="skills" class="col-md-offset-2 col-md-8">
-				<h3>I have experience in:</h3>
+	<div class="mdl-grid">
+		<div class="mdl-cell mdl-cell--1-col"></div>
+			<div class="mdl-cell mdl-cell--4-col">
+				<div class="mdl-card mdl-shadow--2dp">
+				  <div class="mdl-card__title">
+				  	<h2 class="mdl-card__title-text">I have experience in:</h2>
+				  </div>
 
-				<?php
+				  <div class="mdl-card__supporting-text">
+				  	<ul>
+
+				  <?php
 
 					$skills = array(
-						'python' => 90,
-						'Linux' => 85,
-						'HTML' => 80,
-						'Java' => 10,
-						'CSS' => 50,
-						'JavaScript' => 60,
-						'PHP' => 30,
-						'C' => 20);
-
-					arsort($skills);
+						'python',
+						'Linux',
+						'HTML',
+						'Java',
+						'CSS',
+						'JavaScript',
+						'PHP',
+						'C');
 
 
-					foreach ($skills as $skill => $value){
-						echo "<div class='progress'>";
-						echo '<div class="progress-bar" role="progressbar" aria-valuenow="'.$value.'." aria-valuemin="0" aria-valuemax="100" style="width: '.$value.'%;">';
-						echo "<samp>$skill $value%</samp>";
-						echo "</div>";
-						echo "</div>";
+					foreach ($skills as $skill){
+						echo "<li><code>$skill</code></li>";
 					}
 
 				 ?>
+				 	</ul>
+				  
+				  </div>
+
+				</div>
+
+				
 				
 			</div>
 		</div>
-	</div>
+	<?php 
+	include 'templates/footer.php';
+	include 'templates/end_body.php'
+	?>
 </body>
 </html>

@@ -3,7 +3,20 @@
 <?php include 'templates/head.php';?>
 <body>
 	<link rel="stylesheet" type="text/css" href="css/send_contact.css">
-	<?php include 'templates/navbar.php';
+
+	<?php include 'templates/navbar.php';?>
+
+	</br>
+	</br>
+	</br>
+
+	<div class="mdl-grid">
+		<div class="mdl-cell--5-col"></div>
+		<div class="mdl-cell--1-col">
+			<div id='card' class='mdl-card'>
+
+
+	<?php
 
 	$name = $_POST['name'];
 	$email = $_POST['email'];
@@ -13,27 +26,38 @@
 	$personal_email = file_get_contents('ignore/personal_email.txt');
 
 	$email_message = 'You\'ve recieved a message from ' . $email . "\r\n
-		Subject: " . $subject . "\r\n
 		Message: \r\n" . $message;
 
 	$email_message = wordwrap($email_message, 70, "\r\n");
 
-	$status = mail($personal_email, 'New Mail from Qumarth.me!', $email_message);
+	$status = mail($personal_email, 'New Mail from Qumarth.me! Subject: ' . $subject, $email_message);
 
 	if ($status) {
 		//Web page displayed if the message successfully sent
-		echo "<h1 class='col-md-offset-3'>Success!</h1>";
-		echo "<h3 class='col-md-offset-3'>The contact form has successfully sent!</h2>";
-		echo "<h3 class='col-md-offset-3'>I look forward to hearing from you.</h3>";
+		echo "<div class='mdl-card__title'><h2 class='mdl-card__title-text'>Success</h2></div>";
+		echo "<div class='mdl-card__supporting-text'>The contact form has successfully sent.</br>
+		I look forward to getting in contact with you.</div>";
 	}
 
 	else{
 		//Web page displayed if the message has failed to send
-		echo "<h1 class='col-md-offset-3'>I'm Sorry</h1>";
-		echo "<h3 class='col-md-offset-3'>The contact form has failed to send, I'll get onto fixing this</h2>";
-		echo "<h3 class='col-md-offset-3'>In the meantime, please contact me on <a href=https://uk.linkedin.com/in/qmart>LinkedIn</a></h3>";
+		echo "<div class='mdl-card__title'><h2 class='mdl-card__title-text'>I'm Sorry</h2></div>";
+		echo "<div class='mdl-card__supporting-text'>The contact form has failed to send.</br>
+		In the meantime, please contact me on LinkedIn.</div>";
+		echo "  <div class='mdl-card__actions'> <a href='https://uk.linkedin.com/in/qmart'>LinkedIn</a></div>";
 	}
 	?>
-
+	</div>
+	</div>
+	</div>
+	</br>
+	</br>
+	</br>
+	</br>
+	</br>
+<?php
+	include 'templates/footer.php';
+	include 'templates/end_body.php';
+?>
 </body>
 </html>

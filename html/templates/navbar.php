@@ -1,26 +1,42 @@
-<nav class = "navbar navbar-default navbar-static-top" role="navigation">
-		<div class = "container">
-			<a href="index.php" class = "navbar-brand">Qumarth Jash</a>
+<?php
+  $links = array('Home' => 'index.php',
+                'About' => 'about.php',
+                'Contact' => 'contact.php' );
 
-      <!-- Collapsable button for mobile sites -->
-			<button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
-				<span class = "icon-bar"></span>
-				<span class = "icon-bar"></span>
-				<span class = "icon-bar"></span>
-			</button>
+  function EchoLinks(){
+    global $links;
 
-			<div class = "collapse navbar-collapse navHeaderCollapse">
-				
-				<ul class = "nav navbar-nav navbar-right">
+    foreach ($links as $text => $href) {
+    echo "<a class='mdl-navigation__link' href='" . $href . "'>" . $text . "</a>";
+    }
+  }
+  ?>
 
-					<li><a href="about.php">About</a></li>
-					<li><a href="contact.php">Contact</a></li>
-					<li><a href="https://github.com/Q-Mart"><img src = "img/github.png" alt=Github height=25px width=25px></img></a></li>
-					<li><a href="https://uk.linkedin.com/in/qmart"><img src="img/linkedin.png" alt=LinkedIn height=25px width=25px></img></a></li>
 
-				</ul>
+<div class="mdl-layout mdl-js-layout">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout-icon"></div>
+    <div class="mdl-layout__header-row">
+      <span class="mdl-layout-title">Qumarth Jash</span>
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+        <?php 
+          EchoLinks();
+        ?>
+        <a class='mdl-navigation__link' href='https://github.com/Q-Mart'><img src="img/github.png" alt="GitHub"></a>
+        <a class='mdl-navigation__link' href='https://uk.linkedin.com/in/qmart'><img src="img/linkedin.png" alt="LinkedIn"></a>
 
-			</div>
+      </nav>
+    </div>
+  </header>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Qumarth Jash</span>
+    <nav class="mdl-navigation">
+      <?php
+        EchoLinks();
+      ?>
 
-		</div>
-</nav>
+    </nav>
+  </div>
+  <main class="mdl-layout__content">
+
