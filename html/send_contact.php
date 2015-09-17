@@ -25,7 +25,8 @@
 
 	$personal_email = file_get_contents('ignore/personal_email.txt');
 
-	$email_message = 'You\'ve recieved a message from ' . $email . "\r\n
+	$email_message = 'You\'ve recieved a message from ' . $name . "\r\n
+		Email:" . $email . "\r\n
 		Message: \r\n" . $message;
 
 	$email_message = wordwrap($email_message, 70, "\r\n");
