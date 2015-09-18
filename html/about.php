@@ -77,6 +77,8 @@
 				
 			</div>
 		</div>
+	<!--Custom CSS-->
+	<link rel="stylesheet" type="text/css" href="css/about.css">
 	<?php 
 	include 'templates/footer.php';
 	include 'templates/end_body.php'

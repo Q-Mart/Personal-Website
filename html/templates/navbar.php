@@ -12,9 +12,8 @@
   }
   ?>
 
-
 <div class="mdl-layout mdl-js-layout">
-  <header class="mdl-layout__header">
+  <header class="mdl-layout__header mdl-layout__header--transparent">
     <div class="mdl-layout-icon"></div>
     <div class="mdl-layout__header-row">
       <span class="mdl-layout-title">Qumarth Jash</span>
