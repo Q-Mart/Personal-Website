@@ -11,7 +11,10 @@ git pull
 echo "Pulling complete"
 
 echo "Removing old site"
-rm -rf /var/www/qumarth.me/*
+cd /var/www/qumarth.me/html/
+find . -type 'd' | grep -v "ignore" | xargs rmdir
 
 echo "Deploying update"
-cp -r public_html /var/www/qumarth.me/
+cd
+cd Personal-Website/
+cp -r html/ /var/www/qumarth.me/
